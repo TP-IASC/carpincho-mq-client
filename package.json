@@ -4,9 +4,10 @@
   "description": "Biblioteca para clientes de CarpinchoMQ",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel ./lib/index.js -d dist",
-    "start-example-client": "npm run build && node ./example/client.js",
-    "start-example-server": "node ./example/server.js",
+    "build-example": "babel example --out-dir dist/example --extensions \".js\"",
+    "build": "babel lib --out-dir dist/lib --extensions \".js\"",
+    "start-example-client": "node ./dist/example/client.js",
+    "start-example-server": "node ./dist/example/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
