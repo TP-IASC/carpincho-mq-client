@@ -5,7 +5,10 @@ const server = {
     port: 8080
 }
 
-const client = carpinchoMQ(server, 41234);
+
+const port = Number(process.argv[2]);
+
+const client = carpinchoMQ(server, port);
 
 client.setMode(new Transactional());
 
